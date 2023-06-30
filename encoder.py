@@ -4,7 +4,7 @@ from utils.attention import MutiHeadAttention
 from utils.positionWiseFNN import PositionWiseFeedForward
 
 __all__ = [
-    'Encoder'
+    'EncoderBlock'
 ]
 
 
