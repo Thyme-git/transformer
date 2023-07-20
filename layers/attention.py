@@ -123,7 +123,7 @@ class AdditiveAttention(Attention):
 
 
 class MutiHeadAttention(Attention):
-    '''muti-head attention  implementation with dot product attention'''
+    '''muti-head attention implementation with dot product attention'''
     def __init__(self, querySize:int, keySize:int, valueSize:int, numHidden:int, numHeads:int, **kwargs) -> None:
         super().__init__(querySize, keySize, valueSize, numHidden, numHeads, **kwargs)
         self.numHeads = numHeads

@@ -1,7 +1,7 @@
 import torch
 from torch import nn
-from utils.attention import MutiHeadAttention
-from utils.positionWiseFNN import PositionWiseFeedForward
+from layers.attention import MutiHeadAttention
+from layers.positionWiseFNN import PositionWiseFeedForward
 
 __all__ = [
     'EncoderBlock'

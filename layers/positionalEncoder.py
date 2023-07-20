@@ -22,7 +22,7 @@ class PositionalEncoder(nn.Module):
         self.encoding.requires_grad_(False)
         
         tmp = torch.arange(0, maxLength).reshape((-1, 1))
-        tmp = tmp / torch.pow(10000, torch.arange(0, tokenSize, 2) / tokenSize)
+        tmp = tmp / torch.pow(10000, torch.arange(0, tokenSize, 2) / tokenSize).reshape((1, -1))
         
         self.encoding[:, :, 0::2] = torch.sin(tmp)
         self.encoding[:, :, 1::2] = torch.cos(tmp)
